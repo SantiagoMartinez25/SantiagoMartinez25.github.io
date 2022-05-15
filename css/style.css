@@ -259,10 +259,6 @@ input[type=checkbox]{
     gap: 3rem;
     justify-items: center;
     margin-bottom: 2rem;
-    grid-template-areas: 
-    "ghosting"
-    "celiaquia"
-    "autismo";
 }
 
 
@@ -337,9 +333,9 @@ input[type=checkbox]{
         flex-direction: row;
         width: 300px;
         height: 100px;
-        box-shadow: inset 5px 5px 5px rgba(0, 41, 132, 0.2),
-          inset -5px -5px 15px rgba(136, 57, 151, 0.1),
-          5px 5px 15px rgba(0, 41, 132, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); 
+        box-shadow: inset 5px 5px 5px rgba(136, 57, 151, 0.2),
+          inset -5px -5px 15px rgba(0, 41, 132, 0.1),
+          5px 5px 15px rgba(136, 57, 151, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); 
     }
 
 
@@ -356,18 +352,13 @@ input[type=checkbox]{
         padding-bottom: 10px;    
     }
 
-    .card-celiaquia{
-        grid-area: "celiaquia";
+    .card-veteranos-image{
+        background-image: url(../img/veteranos-image.jpg);
     }
 
-    .card-ghosting{
-        grid-area: "ghosting";
+    .card-videojuegos-image{
+        background-image: url(../img/pueden-ser-los-videojuegos-una-adiccion.jpg);
     }
-
-    .card-autismo{
-        grid-area: "autismo";
-    }
-
     .card-ghosting-image{
         background-image: url(../img/ghosting-journal-image.jpg);
     }
@@ -396,9 +387,5 @@ input[type=checkbox]{
     .grid-journal{
         display: grid;
         gap: 1rem;
-        grid-template-areas: 
-        "ghosting"
-        "celiaquia"
-        "autismo";
     }
 }
