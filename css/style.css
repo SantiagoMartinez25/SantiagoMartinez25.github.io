@@ -1,0 +1,320 @@
+
+html {
+    font-family: "Libre Baskerville";
+}
+
+section{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+:root {
+    --blue: rgb(0, 41, 132);
+    --pink: rgb(136, 57, 151);
+    --black: #212529; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+span{
+    font-style: italic;
+}
+
+h1{
+    color: var(--pink);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: var(--black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    color: var(--blue);
+   }
+   .nav-links a {
+    color: var(--blue);
+   }
+
+   .nav-links a:hover {
+    color: white;
+   }
+
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: var(--pink);
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+
+.banner-image{
+    display: block;
+    width: 100%;
+    max-height: 18.75rem;
+    margin-bottom: 2%;
+}
+
+.card-rrss{
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    max-height: max-content;
+    text-align: center;
+    box-shadow: inset 5px 5px 5px rgba(136, 57, 151, 0.2),
+      inset -5px -5px 15px rgba(0, 41, 132, 0.1),
+      5px 5px 15px rgba(136, 57, 151, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding-bottom: 10px;    
+}
+
+.card-rrss-content{
+    padding-top: 2rem;
+    
+}
+
+.card-rrss h3 {
+    font-size: 1.8rem;
+    color: var(--blue);
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+.button{
+    position: relative;
+    padding: 8px 20px;
+    width: fit-content;
+    background: var(--blue);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+.card-button{
+    margin-left: auto;
+    margin-right: 5%;
+    
+    
+}
+
+.grid-rrss {
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+    grid-template-areas: 
+    "logoig logoin";
+    
+}
+
+.grid-journal{
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+    grid-template-areas: 
+    "ghosting"
+    "celiaquia"
+    "autismo";
+}
+
+.card-rrss-logo{
+    margin: auto;
+    border-radius:5px;
+    height: 50px;
+    width: 50px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-ig{
+    grid-area: logoig;
+    background-image: url(../img/logo-minimalist-instagram.png);
+}
+
+.logo-in{
+    grid-area: logoin;
+    background-image: url(../img/linkedin.png);
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    h1{
+        font-size: 1.313rem;
+        color: var(--pink);
+    }
+
+    p{
+        font-size: 0.875rem;
+    }
+
+    section{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 10px;
+        box-shadow: 1px 1px 2px var(--pink);
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: var(--pink);
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero-image{
+        height: 150px;
+    }
+
+    .card-sobre-mi{
+        border: 1px solid var(--blue);
+        border-radius: 8px;
+        padding-left: 14px;
+        padding-right: 14px; 
+        text-align: justify;
+        line-height: 1.5rem;
+    }
+
+    .grid-rrss {
+        display: grid;
+        gap: 1rem;
+        justify-items: center;
+        grid-template-areas: 
+        "logoig" 
+        "logoin";
+    }
+
+    .card-journal{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 545px;
+        min-height: 350px;
+        box-shadow: inset 5px 5px 5px rgba(0, 41, 132, 0.2),
+          inset -5px -5px 15px rgba(136, 57, 151, 0.1),
+          5px 5px 15px rgba(0, 41, 132, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding-bottom: 10px;    
+    }
+
+    .card-celiaquia{
+        grid-area: "celiaquia";
+    }
+
+    .card-ghosting{
+        grid-area: "ghosting";
+    }
+
+    .card-autismo{
+        grid-area: "autismo";
+    }
+
+    .card-ghosting-image{
+        background-image: url(../img/ghosting-journal-image.jpg);
+    }
+
+    .card-celiaquia-image{
+        background-image: url(../img/celiaquia.jpg);
+    }
+
+    .card-autismo-image{
+        background-image: url(../img/autismo.jpg);
+    }
+
+    .card-journal-content{
+        padding-left: 1rem;
+    }
+
+    .card-journal-image{
+        border-radius: 16px 16px 0 0  ;
+        min-height: 35%;
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+        z-index: -1;
+    }
+
+    .grid-journal{
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 
+        "ghosting"
+        "celiaquia"
+        "autismo";
+    }
+
+
+
+
+}
