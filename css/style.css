@@ -69,7 +69,6 @@ footer{
 .footer-content h3{
     font-size: 2.1rem;
     font-weight: 500;
-    text-transform: capitalize;
     line-height: 3rem;
     margin-block-end: 0;
 }
@@ -118,7 +117,6 @@ footer{
     float: left;
     font-size: 14px;
     word-spacing: 2px;
-    text-transform: capitalize;
  }
  .footer-bottom p a{
    color:#44bae8;
@@ -387,5 +385,12 @@ input[type=checkbox]{
     .grid-journal{
         display: grid;
         gap: 1rem;
+    }
+
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+        margin-bottom: 2rem;
     }
 }
