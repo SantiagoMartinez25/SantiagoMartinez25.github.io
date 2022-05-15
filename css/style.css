@@ -46,6 +46,91 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+footer{
+        position: static;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        background: var(--pink);
+        height: auto;
+        width: 100%;
+        color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    margin-block-end: 0;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .footer-bottom p a{
+   color:#44bae8;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer-bottom span{
+     text-transform: uppercase;
+     opacity: .4;
+     font-weight: 200;
+ }
+
 
 
 /* NAVBAR STYLING STARTS */
@@ -102,34 +187,6 @@ input[type=checkbox]{
     margin-bottom: 2%;
 }
 
-.card-rrss{
-    position: relative;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 400px;
-    max-height: max-content;
-    text-align: center;
-    box-shadow: inset 5px 5px 5px rgba(136, 57, 151, 0.2),
-      inset -5px -5px 15px rgba(0, 41, 132, 0.1),
-      5px 5px 15px rgba(136, 57, 151, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding-bottom: 10px;    
-}
-
-.card-rrss-content{
-    padding-top: 2rem;
-    
-}
-
-.card-rrss h3 {
-    font-size: 1.8rem;
-    color: var(--blue);
-    z-index: 1;
-    margin-bottom: 15px;
-}
-
 .button{
     position: relative;
     padding: 8px 20px;
@@ -145,48 +202,69 @@ input[type=checkbox]{
 .card-button{
     margin-left: auto;
     margin-right: 5%;
-    
-    
 }
 
 .grid-rrss {
     display: grid;
     gap: 3rem;
     justify-items: center;
-    grid-template-areas: 
-    "logoig logoin";
-    
 }
 
+.rrss-image{
+    width: 75px;
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+}
+
+.info-rrss-container{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.instagram-title{
+    background-image: url(../img/instagram.png);
+    width: 100px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.linkedin-title{
+    margin: 0; 
+    margin-bottom: 3px; 
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #0077B5;
+}
+
+.user-rrss{
+    opacity: 0.7;
+}
+
+.logo-ig{
+    background-image: url(../img/Instagram_Glyph_Gradient_RGB.png);
+}
+
+.logo-in{
+    background-image: url(../img/LI-In-Bug.png);
+}
 .grid-journal{
     display: grid;
     gap: 3rem;
     justify-items: center;
+    margin-bottom: 2rem;
     grid-template-areas: 
     "ghosting"
     "celiaquia"
     "autismo";
 }
 
-.card-rrss-logo{
-    margin: auto;
-    border-radius:5px;
-    height: 50px;
-    width: 50px;
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.logo-ig{
-    grid-area: logoig;
-    background-image: url(../img/logo-minimalist-instagram.png);
-}
-
-.logo-in{
-    grid-area: logoin;
-    background-image: url(../img/linkedin.png);
-}
 
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
@@ -250,12 +328,22 @@ input[type=checkbox]{
         display: grid;
         gap: 1rem;
         justify-items: center;
-        grid-template-areas: 
-        "logoig" 
-        "logoin";
     }
 
-    .card-journal{
+    .card-rrss-box{
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        width: 300px;
+        height: 100px;
+        box-shadow: inset 5px 5px 5px rgba(0, 41, 132, 0.2),
+          inset -5px -5px 15px rgba(136, 57, 151, 0.1),
+          5px 5px 15px rgba(0, 41, 132, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); 
+    }
+
+
+    .cards-journal{
         position: relative;
         display: flex;
         flex-direction: column;
@@ -313,8 +401,4 @@ input[type=checkbox]{
         "celiaquia"
         "autismo";
     }
-
-
-
-
 }
